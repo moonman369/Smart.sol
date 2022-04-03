@@ -1,0 +1,95 @@
+{
+	"compiler": {
+		"version": "0.8.13+commit.abaa5c0e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "val",
+						"type": "uint256"
+					}
+				],
+				"name": "append",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "arr",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_old",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_new",
+						"type": "uint256"
+					}
+				],
+				"name": "replace",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Libraries2.sol": "wFor"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Libraries2.sol": {
+			"keccak256": "0xaf44251f5e9ca2db9efb111d8722094cf5e7684986991ff3ab2a32b720f09b11",
+			"urls": [
+				"bzz-raw://3a298475e9bd1deec011e770f210a3d02d45fea6e1c199114c64cba3e39374df",
+				"dweb:/ipfs/QmPshowL3mqffQjDEWYUKNkgHydf4Wo2prQfhJ6EAwnBVd"
+			]
+		}
+	},
+	"version": 1
+}

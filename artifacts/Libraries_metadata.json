@@ -1,0 +1,114 @@
+{
+	"compiler": {
+		"version": "0.8.13+commit.abaa5c0e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "sendToken",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "tokenBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Libraries.sol": "Libraries"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Libraries.sol": {
+			"keccak256": "0xcd0c85e073a24c91c94cb46ad19e0733540bb1bf03bcfa585d068b5e00d1347d",
+			"urls": [
+				"bzz-raw://ad539eb521225b2760b40e75853110f0aa4ef2c896135ac10a73668f64eb0cdb",
+				"dweb:/ipfs/QmdKEuexi6GjU1Y2rGRfosefHPDebBhN8S6MKXFFDxHPhc"
+			]
+		},
+		"https://github.com/OpenZeppelin/openzeppelin-contracts/contracts/utils/math/SafeMath.sol": {
+			"keccak256": "0x80a62a632fb210251e8a7632c66d8624fd1c2e60b75b3e08c8b04803abec336f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0163070ead773cf28c76b7d88abb8ecf1c0a2cebda62cc44ca91f60faae361d6",
+				"dweb:/ipfs/QmfVwE4pVia7L7LMbSkQRUWzmX6f4XpdagrrXh7or2qhyd"
+			]
+		}
+	},
+	"version": 1
+}
