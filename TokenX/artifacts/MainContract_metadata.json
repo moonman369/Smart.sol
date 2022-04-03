@@ -1,0 +1,165 @@
+{
+	"compiler": {
+		"version": "0.7.6+commit.7338295f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "txSent",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "burnTx",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "buyTx",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "mintTx",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_txAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "sendTx",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "txBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_txAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "txToEth",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"TokenX/MainContract.sol": "MainContract"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"TokenX/MainContract.sol": {
+			"keccak256": "0x5626ba36080647351eb3ba6d385d556e7506e8915d2d3477dd1b55ab0768584d",
+			"urls": [
+				"bzz-raw://69724c8b2c1f4d01400cb733a1c87636fd1285d4c2c6bbd8b9fa151441e4fae8",
+				"dweb:/ipfs/QmVPZoiXhZeTwLQqNUiEgeZ9WHJSp5q3CfkPNKX857JPQ4"
+			]
+		},
+		"TokenX/Ownership.sol": {
+			"keccak256": "0x460d8896bd0b695873df2a733aad91462ebc1522bdd9753b9fc8585770d30af7",
+			"urls": [
+				"bzz-raw://cb499d3d6a31472570e99feaf54409d47557783af86b2bb5276d4d0b483e1172",
+				"dweb:/ipfs/QmbupBU2QxRrcyhQZ6SCrxv3cv65zaMPh17mkq37m2h7ey"
+			]
+		}
+	},
+	"version": 1
+}

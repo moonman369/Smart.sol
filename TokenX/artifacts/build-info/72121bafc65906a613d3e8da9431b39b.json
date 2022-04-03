@@ -1,0 +1,742 @@
+{
+	"id": "72121bafc65906a613d3e8da9431b39b",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.7.6",
+	"solcLongVersion": "0.7.6+commit.7338295f",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"TokenX/Ownership.sol": {
+				"content": "pragma solidity ^0.7.0;\r\n\r\ncontract Ownership {\r\n    address owner;\r\n\r\n    constructor () public{\r\n        owner = msg.sender;\r\n    }\r\n\r\n    modifier ownerCheck {\r\n        require (msg.sender == owner, \"OwnerAuthException\");\r\n        _;\r\n    }\r\n\r\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"TokenX/Ownership.sol": {
+				"Ownership": {
+					"abi": [
+						{
+							"inputs": [],
+							"stateMutability": "nonpayable",
+							"type": "constructor"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"TokenX/Ownership.sol\":27:248  contract Ownership {\r... */\n  mstore(0x40, 0x80)\n    /* \"TokenX/Ownership.sol\":75:133  constructor () public{\r... */\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n    /* \"TokenX/Ownership.sol\":115:125  msg.sender */\n  caller\n    /* \"TokenX/Ownership.sol\":107:112  owner */\n  0x00\n  dup1\n    /* \"TokenX/Ownership.sol\":107:125  owner = msg.sender */\n  0x0100\n  exp\n  dup2\n  sload\n  dup2\n  0xffffffffffffffffffffffffffffffffffffffff\n  mul\n  not\n  and\n  swap1\n  dup4\n  0xffffffffffffffffffffffffffffffffffffffff\n  and\n  mul\n  or\n  swap1\n  sstore\n  pop\n    /* \"TokenX/Ownership.sol\":27:248  contract Ownership {\r... */\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"TokenX/Ownership.sol\":27:248  contract Ownership {\r... */\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa2646970667358221220d49890289f40b0da1a9fa1afa374941b12f522143a1d1dc57c3c5f66c71537d264736f6c63430007060033\n}\n",
+						"bytecode": {
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6080604052348015600f57600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550603f80605d6000396000f3fe6080604052600080fdfea2646970667358221220d49890289f40b0da1a9fa1afa374941b12f522143a1d1dc57c3c5f66c71537d264736f6c63430007060033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLER PUSH1 0x0 DUP1 PUSH2 0x100 EXP DUP2 SLOAD DUP2 PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF MUL NOT AND SWAP1 DUP4 PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND MUL OR SWAP1 SSTORE POP PUSH1 0x3F DUP1 PUSH1 0x5D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xD4 SWAP9 SWAP1 0x28 SWAP16 BLOCKHASH 0xB0 0xDA BYTE SWAP16 LOG1 0xAF LOG3 PUSH21 0x941B12F522143A1D1DC57C3C5F66C71537D264736F PUSH13 0x63430007060033000000000000 ",
+							"sourceMap": "27:221:0:-:0;;;75:58;;;;;;;;;;115:10;107:5;;:18;;;;;;;;;;;;;;;;;;27:221;;;;;;"
+						},
+						"deployedBytecode": {
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "6080604052600080fdfea2646970667358221220d49890289f40b0da1a9fa1afa374941b12f522143a1d1dc57c3c5f66c71537d264736f6c63430007060033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xD4 SWAP9 SWAP1 0x28 SWAP16 BLOCKHASH 0xB0 0xDA BYTE SWAP16 LOG1 0xAF LOG3 PUSH21 0x941B12F522143A1D1DC57C3C5F66C71537D264736F PUSH13 0x63430007060033000000000000 ",
+							"sourceMap": "27:221:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12600",
+								"executionCost": "20932",
+								"totalCost": "33532"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 27,
+									"end": 248,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 27,
+									"end": 248,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 27,
+									"end": 248,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 75,
+									"end": 133,
+									"name": "CALLVALUE",
+									"source": 0
+								},
+								{
+									"begin": 75,
+									"end": 133,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 75,
+									"end": 133,
+									"name": "ISZERO",
+									"source": 0
+								},
+								{
+									"begin": 75,
+									"end": 133,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 75,
+									"end": 133,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 75,
+									"end": 133,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 75,
+									"end": 133,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 75,
+									"end": 133,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 75,
+									"end": 133,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 75,
+									"end": 133,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 75,
+									"end": 133,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 115,
+									"end": 125,
+									"name": "CALLER",
+									"source": 0
+								},
+								{
+									"begin": 107,
+									"end": 112,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 107,
+									"end": 112,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 107,
+									"end": 125,
+									"name": "PUSH",
+									"source": 0,
+									"value": "100"
+								},
+								{
+									"begin": 107,
+									"end": 125,
+									"name": "EXP",
+									"source": 0
+								},
+								{
+									"begin": 107,
+									"end": 125,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 107,
+									"end": 125,
+									"name": "SLOAD",
+									"source": 0
+								},
+								{
+									"begin": 107,
+									"end": 125,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 107,
+									"end": 125,
+									"name": "PUSH",
+									"source": 0,
+									"value": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+								},
+								{
+									"begin": 107,
+									"end": 125,
+									"name": "MUL",
+									"source": 0
+								},
+								{
+									"begin": 107,
+									"end": 125,
+									"name": "NOT",
+									"source": 0
+								},
+								{
+									"begin": 107,
+									"end": 125,
+									"name": "AND",
+									"source": 0
+								},
+								{
+									"begin": 107,
+									"end": 125,
+									"name": "SWAP1",
+									"source": 0
+								},
+								{
+									"begin": 107,
+									"end": 125,
+									"name": "DUP4",
+									"source": 0
+								},
+								{
+									"begin": 107,
+									"end": 125,
+									"name": "PUSH",
+									"source": 0,
+									"value": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+								},
+								{
+									"begin": 107,
+									"end": 125,
+									"name": "AND",
+									"source": 0
+								},
+								{
+									"begin": 107,
+									"end": 125,
+									"name": "MUL",
+									"source": 0
+								},
+								{
+									"begin": 107,
+									"end": 125,
+									"name": "OR",
+									"source": 0
+								},
+								{
+									"begin": 107,
+									"end": 125,
+									"name": "SWAP1",
+									"source": 0
+								},
+								{
+									"begin": 107,
+									"end": 125,
+									"name": "SSTORE",
+									"source": 0
+								},
+								{
+									"begin": 107,
+									"end": 125,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 27,
+									"end": 248,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 27,
+									"end": 248,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 27,
+									"end": 248,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 27,
+									"end": 248,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 27,
+									"end": 248,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 27,
+									"end": 248,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 27,
+									"end": 248,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a2646970667358221220d49890289f40b0da1a9fa1afa374941b12f522143a1d1dc57c3c5f66c71537d264736f6c63430007060033",
+									".code": [
+										{
+											"begin": 27,
+											"end": 248,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 27,
+											"end": 248,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 27,
+											"end": 248,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 27,
+											"end": 248,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 27,
+											"end": 248,
+											"name": "DUP1",
+											"source": 0
+										},
+										{
+											"begin": 27,
+											"end": 248,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							}
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"TokenX/Ownership.sol\":\"Ownership\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"TokenX/Ownership.sol\":{\"keccak256\":\"0x460d8896bd0b695873df2a733aad91462ebc1522bdd9753b9fc8585770d30af7\",\"urls\":[\"bzz-raw://cb499d3d6a31472570e99feaf54409d47557783af86b2bb5276d4d0b483e1172\",\"dweb:/ipfs/QmbupBU2QxRrcyhQZ6SCrxv3cv65zaMPh17mkq37m2h7ey\"]}},\"version\":1}",
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "1878",
+				"formattedMessage": "TokenX/Ownership.sol: Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.\n",
+				"message": "SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "TokenX/Ownership.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			},
+			{
+				"component": "general",
+				"errorCode": "2462",
+				"formattedMessage": "TokenX/Ownership.sol:6:5: Warning: Visibility for constructor is ignored. If you want the contract to be non-deployable, making it \"abstract\" is sufficient.\n    constructor () public{\n    ^ (Relevant source part starts here and spans across multiple lines).\n",
+				"message": "Visibility for constructor is ignored. If you want the contract to be non-deployable, making it \"abstract\" is sufficient.",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": 133,
+					"file": "TokenX/Ownership.sol",
+					"start": 75
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"TokenX/Ownership.sol": {
+				"ast": {
+					"absolutePath": "TokenX/Ownership.sol",
+					"exportedSymbols": {
+						"Ownership": [
+							25
+						]
+					},
+					"id": 26,
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.7",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "0:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 25,
+							"linearizedBaseContracts": [
+								25
+							],
+							"name": "Ownership",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"constant": false,
+									"id": 3,
+									"mutability": "mutable",
+									"name": "owner",
+									"nodeType": "VariableDeclaration",
+									"scope": 25,
+									"src": "53:13:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_address",
+										"typeString": "address"
+									},
+									"typeName": {
+										"id": 2,
+										"name": "address",
+										"nodeType": "ElementaryTypeName",
+										"src": "53:7:0",
+										"stateMutability": "nonpayable",
+										"typeDescriptions": {
+											"typeIdentifier": "t_address",
+											"typeString": "address"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"body": {
+										"id": 11,
+										"nodeType": "Block",
+										"src": "96:37:0",
+										"statements": [
+											{
+												"expression": {
+													"id": 9,
+													"isConstant": false,
+													"isLValue": false,
+													"isPure": false,
+													"lValueRequested": false,
+													"leftHandSide": {
+														"id": 6,
+														"name": "owner",
+														"nodeType": "Identifier",
+														"overloadedDeclarations": [],
+														"referencedDeclaration": 3,
+														"src": "107:5:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_address",
+															"typeString": "address"
+														}
+													},
+													"nodeType": "Assignment",
+													"operator": "=",
+													"rightHandSide": {
+														"expression": {
+															"id": 7,
+															"name": "msg",
+															"nodeType": "Identifier",
+															"overloadedDeclarations": [],
+															"referencedDeclaration": 4294967281,
+															"src": "115:3:0",
+															"typeDescriptions": {
+																"typeIdentifier": "t_magic_message",
+																"typeString": "msg"
+															}
+														},
+														"id": 8,
+														"isConstant": false,
+														"isLValue": false,
+														"isPure": false,
+														"lValueRequested": false,
+														"memberName": "sender",
+														"nodeType": "MemberAccess",
+														"src": "115:10:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_address_payable",
+															"typeString": "address payable"
+														}
+													},
+													"src": "107:18:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"id": 10,
+												"nodeType": "ExpressionStatement",
+												"src": "107:18:0"
+											}
+										]
+									},
+									"id": 12,
+									"implemented": true,
+									"kind": "constructor",
+									"modifiers": [],
+									"name": "",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 4,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "87:2:0"
+									},
+									"returnParameters": {
+										"id": 5,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "96:0:0"
+									},
+									"scope": 25,
+									"src": "75:58:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "public"
+								},
+								{
+									"body": {
+										"id": 23,
+										"nodeType": "Block",
+										"src": "161:82:0",
+										"statements": [
+											{
+												"expression": {
+													"arguments": [
+														{
+															"commonType": {
+																"typeIdentifier": "t_address",
+																"typeString": "address"
+															},
+															"id": 18,
+															"isConstant": false,
+															"isLValue": false,
+															"isPure": false,
+															"lValueRequested": false,
+															"leftExpression": {
+																"expression": {
+																	"id": 15,
+																	"name": "msg",
+																	"nodeType": "Identifier",
+																	"overloadedDeclarations": [],
+																	"referencedDeclaration": 4294967281,
+																	"src": "181:3:0",
+																	"typeDescriptions": {
+																		"typeIdentifier": "t_magic_message",
+																		"typeString": "msg"
+																	}
+																},
+																"id": 16,
+																"isConstant": false,
+																"isLValue": false,
+																"isPure": false,
+																"lValueRequested": false,
+																"memberName": "sender",
+																"nodeType": "MemberAccess",
+																"src": "181:10:0",
+																"typeDescriptions": {
+																	"typeIdentifier": "t_address_payable",
+																	"typeString": "address payable"
+																}
+															},
+															"nodeType": "BinaryOperation",
+															"operator": "==",
+															"rightExpression": {
+																"id": 17,
+																"name": "owner",
+																"nodeType": "Identifier",
+																"overloadedDeclarations": [],
+																"referencedDeclaration": 3,
+																"src": "195:5:0",
+																"typeDescriptions": {
+																	"typeIdentifier": "t_address",
+																	"typeString": "address"
+																}
+															},
+															"src": "181:19:0",
+															"typeDescriptions": {
+																"typeIdentifier": "t_bool",
+																"typeString": "bool"
+															}
+														},
+														{
+															"hexValue": "4f776e657241757468457863657074696f6e",
+															"id": 19,
+															"isConstant": false,
+															"isLValue": false,
+															"isPure": true,
+															"kind": "string",
+															"lValueRequested": false,
+															"nodeType": "Literal",
+															"src": "202:20:0",
+															"typeDescriptions": {
+																"typeIdentifier": "t_stringliteral_2dd1a5e7274a268eb4bc8ce2cbf8230143bf9639e9cb424cf2e98b3f8f4609cd",
+																"typeString": "literal_string \"OwnerAuthException\""
+															},
+															"value": "OwnerAuthException"
+														}
+													],
+													"expression": {
+														"argumentTypes": [
+															{
+																"typeIdentifier": "t_bool",
+																"typeString": "bool"
+															},
+															{
+																"typeIdentifier": "t_stringliteral_2dd1a5e7274a268eb4bc8ce2cbf8230143bf9639e9cb424cf2e98b3f8f4609cd",
+																"typeString": "literal_string \"OwnerAuthException\""
+															}
+														],
+														"id": 14,
+														"name": "require",
+														"nodeType": "Identifier",
+														"overloadedDeclarations": [
+															4294967278,
+															4294967278
+														],
+														"referencedDeclaration": 4294967278,
+														"src": "172:7:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+															"typeString": "function (bool,string memory) pure"
+														}
+													},
+													"id": 20,
+													"isConstant": false,
+													"isLValue": false,
+													"isPure": false,
+													"kind": "functionCall",
+													"lValueRequested": false,
+													"names": [],
+													"nodeType": "FunctionCall",
+													"src": "172:51:0",
+													"tryCall": false,
+													"typeDescriptions": {
+														"typeIdentifier": "t_tuple$__$",
+														"typeString": "tuple()"
+													}
+												},
+												"id": 21,
+												"nodeType": "ExpressionStatement",
+												"src": "172:51:0"
+											},
+											{
+												"id": 22,
+												"nodeType": "PlaceholderStatement",
+												"src": "234:1:0"
+											}
+										]
+									},
+									"id": 24,
+									"name": "ownerCheck",
+									"nodeType": "ModifierDefinition",
+									"parameters": {
+										"id": 13,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "161:0:0"
+									},
+									"src": "141:102:0",
+									"virtual": false,
+									"visibility": "internal"
+								}
+							],
+							"scope": 26,
+							"src": "27:221:0"
+						}
+					],
+					"src": "0:248:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

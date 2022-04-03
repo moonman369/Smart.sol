@@ -1,0 +1,50 @@
+{
+	"compiler": {
+		"version": "0.7.6+commit.7338295f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"TokenX/Ownership.sol": "Ownership"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"TokenX/Ownership.sol": {
+			"keccak256": "0x460d8896bd0b695873df2a733aad91462ebc1522bdd9753b9fc8585770d30af7",
+			"urls": [
+				"bzz-raw://cb499d3d6a31472570e99feaf54409d47557783af86b2bb5276d4d0b483e1172",
+				"dweb:/ipfs/QmbupBU2QxRrcyhQZ6SCrxv3cv65zaMPh17mkq37m2h7ey"
+			]
+		}
+	},
+	"version": 1
+}
