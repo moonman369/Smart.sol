@@ -1,32 +1,35 @@
 {
 	"compiler": {
-		"version": "0.8.7+commit.e28d00a7"
+		"version": "0.6.12+commit.27d51765"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "val",
-						"type": "uint256"
+						"internalType": "address payable",
+						"name": "beneficiary",
+						"type": "address"
 					}
 				],
-				"name": "append",
+				"name": "destroy_contract",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "arr",
+				"inputs": [],
+				"name": "get_balance",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -39,31 +42,38 @@
 			},
 			{
 				"inputs": [],
-				"name": "getArr",
+				"name": "owner",
 				"outputs": [
 					{
-						"internalType": "uint256[]",
+						"internalType": "address",
 						"name": "",
-						"type": "uint256[]"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "receiveEth",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_old",
-						"type": "uint256"
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_new",
+						"name": "_amt",
 						"type": "uint256"
 					}
 				],
-				"name": "replace",
+				"name": "withdrawAllMoney",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -82,9 +92,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Libraries2.sol": "woFor"
+			"SelfDestruct.sol": "Self_destruct"
 		},
-		"evmVersion": "london",
+		"evmVersion": "istanbul",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -96,11 +106,11 @@
 		"remappings": []
 	},
 	"sources": {
-		"Libraries2.sol": {
-			"keccak256": "0x372e286f6fef4102ad5ca8ee18677e5614fc3bd24cc08a97da89653acc82c8f1",
+		"SelfDestruct.sol": {
+			"keccak256": "0x527bf23db7e1b3f462b6dde60cb4436ec085560f754be6e4ed42d1f200bd8925",
 			"urls": [
-				"bzz-raw://c71b3518033ece7c710cf5a67f6053892c124db4dd8a117b006ec967b6bdead1",
-				"dweb:/ipfs/QmcdHaLuG78eQ7H5dEwjT7zn3LBMyCzqLjCTznWtHB7ygX"
+				"bzz-raw://fe17c79464a6ef82ee703594623291bdd6f42e5bbdbaf0b0010780842c8acb85",
+				"dweb:/ipfs/QmP7rkuPPNWyBtxqmr2Uv5FJHePwAWRbV7EJmNd3LiNA2X"
 			]
 		}
 	},
