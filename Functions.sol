@@ -4,6 +4,8 @@ contract Functions{
 
     address public owner;
 
+    event txData(address _addr, uint _amount);
+
     constructor() public {
         owner = msg.sender;
     }
@@ -16,10 +18,12 @@ contract Functions{
 
     receive() external payable {
         receiveMoney();
+        emit txData(msg.sender, msg.value);
     }
 
     fallback() external payable {
         receiveMoney();
+        emit txData(msg.sender, msg.value);
     }
 
     function weiToEth(uint _amountWei) public pure returns(uint) { //

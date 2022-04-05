@@ -11,6 +11,25 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "txData",
+				"type": "event"
+			},
+			{
 				"stateMutability": "payable",
 				"type": "fallback"
 			},
@@ -123,10 +142,10 @@
 	},
 	"sources": {
 		"Functions.sol": {
-			"keccak256": "0x0e33e56d46cc1eddadc849c1d59cafb07f8b4b7761ecdbd5a9c3c7714087eca2",
+			"keccak256": "0xebae3d6536c6d3db928858a8616378f8814c563c9d7aaf48067cf2619a6895f4",
 			"urls": [
-				"bzz-raw://34339014d05b7968b7178ddcfaa99bfc421bbb65096495fc36794729802c5b64",
-				"dweb:/ipfs/QmQf8dmnhL9iLjLoWpaAL9qVbYbV5PjsSMFmmzm7mVQQV5"
+				"bzz-raw://7cd40d4590c8d0edb2902cb08a9159dcf50377a0b796aecabd8f407433f6eaf7",
+				"dweb:/ipfs/QmXVSVkvAno3Fe4cy3LL3dYCBnr5tygvzmanYWTyoaNju8"
 			]
 		}
 	},
