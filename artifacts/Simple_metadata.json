@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_ui",
+						"type": "uint256"
+					}
+				],
+				"name": "setUi",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ui",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Simple.sol": "Simple"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Simple.sol": {
+			"keccak256": "0x0c76eb5ae3bfbadb01c0b03bd6ff4383f9e00e456e53a111fa8a90fceecc5a45",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b60e2ed492fd9e0647bee8506d9da14d0893d3c863d1703bef48969efb504e94",
+				"dweb:/ipfs/QmRgGmDqL2Suma1HKpMQd8GK86XC6mmf917v7G38mKvf5f"
+			]
+		}
+	},
+	"version": 1
+}
